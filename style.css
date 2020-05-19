@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.row {
+    max-width: 70rem;
+    height: 40rem;
+    margin: 0 auto;
+    /* background-color: red; */
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    margin-top: 5%;
+}
+
+.row .col-1-of-2:nth-child(1) {
+    width: calc((110% - .0rem) / 2);
+    height: 100%;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 8.5rem;
+}
+
+.row .col-1-of-2:nth-child(2) {
+    width: calc((90% - .0rem) / 2);
+    height: 100%;
+    background-image: url('./images/hero-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+.row [class^="col-"] {
+    float: left; 
+}
+
+.col-1-of-2:nth-child(1) > .logo {
+    margin-top: 10%;
+}
+
+footer {
+    margin-top: 2%;
+}
